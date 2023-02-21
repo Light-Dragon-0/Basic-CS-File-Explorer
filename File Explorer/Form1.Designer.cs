@@ -29,13 +29,14 @@ namespace File_Explorer
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.imageList1 = new System.Windows.Forms.ImageList();
             this.SuspendLayout();
             // 
             // button1
@@ -80,6 +81,7 @@ namespace File_Explorer
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(488, 30);
             this.textBox1.TabIndex = 3;
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
@@ -99,14 +101,16 @@ namespace File_Explorer
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem6});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(0, 36);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(798, 413);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.DockChanged += new System.EventHandler(this.listView1_DockChanged);
             this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
+            listView1.SmallImageList = imageList1;
+            listView1.LargeImageList = imageList1;
+            listView1.View = System.Windows.Forms.View.LargeIcon;
             // 
             // Form1
             // 
@@ -135,6 +139,7 @@ namespace File_Explorer
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
